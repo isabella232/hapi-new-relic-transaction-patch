@@ -1,6 +1,6 @@
 {
   "name": "hapi-new-relic-transaction-patch",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Patch for bug in New Relic's Hapi instrumentation.",
   "main": "lib/index.js",
   "scripts": {
