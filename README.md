@@ -1,6 +1,10 @@
 # hapi-new-relic-transaction-patch [![npm version](https://badge.fury.io/js/hapi-new-relic-transaction-patch.svg)](http://badge.fury.io/js/hapi-new-relic-transaction-patch) [![Build Status](https://travis-ci.org/lob/hapi-new-relic-transaction-patch.svg)](https://travis-ci.org/lob/hapi-new-relic-transaction-patch)
 
-This Hapi plugin fixes a bug in node-newrelic that incorrectly reports transactions with URLs of /*. Thib bug occurs when a request extension (onPostAuth, onPreresponse, etc.) calls request.reply() within a promise chain, and concurrent requests are begin handled by the server.
+## Note
+
+**NewRelic fixed the issue in [node-newrelic v1.25.5](https://github.com/newrelic/node-newrelic/releases/tag/v1.25.5). This patch is no longer relevant.**
+
+This Hapi plugin fixes a bug in node-newrelic that incorrectly reports transactions with URLs of /*. This bug occurs when a request extension (onPostAuth, onPreresponse, etc.) calls request.reply() within a promise chain, and concurrent requests are begin handled by the server.
 
 There is an example application that reproduces this bug here: https://github.com/mgartner/newrelic-hapi-url-bug
 
